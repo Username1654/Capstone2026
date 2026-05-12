@@ -1,0 +1,15 @@
+.App{
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr ;
+  max-width: 100vw;
+ max-height: 100vh;
+  overflow: hidden;
+  background-color: gray;
+
+}
+#game{
+  grid-column: 2;
+  grid-row: 1;
+}
