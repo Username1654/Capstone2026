@@ -3,6 +3,7 @@ import './styles/App.css'
 import './styles/thing.css'
 import Chat from './Chat';
 import GameBoard from './gameBoard';
+import Enemy from './Enemy';
 function App() {
   const [playerId, setPlayerId] = useState('');
   const [messages, setMessages] = useState([]);
@@ -23,9 +24,7 @@ const [keyPress,setKeyPress] = ['']
       socket.close();
     };
   }, []);
-document.addEventListener("keydown", function(keyPress){
-console.log(keyPress.key)
-})
+  
   return (
     <div className="App">
       <section id="game">
@@ -33,9 +32,10 @@ console.log(keyPress.key)
       <p>Your Player ID: <strong>{playerId}</strong></p>
       </section>
       <Chat/>
-      <GameBoard/>
+      <GameBoard player={"players"} projectile={"projectile"}/>
     </div>
   );
 }
 
 export default App;
+
